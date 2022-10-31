@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: const [
           Locale('fa'),
         ],
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.light,
         theme: AppTheme().appTheme(),
         initialRoute: RoutesName.main,
         onGenerateRoute: Routes.generateRoute,
