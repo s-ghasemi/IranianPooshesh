@@ -1,11 +1,8 @@
-
-
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../response/app_exceptions.dart';
+import '../app_exceptions.dart';
 import 'base_api_services.dart';
 
 class NetworkApiServices extends BaseApiServices {
@@ -13,9 +10,15 @@ class NetworkApiServices extends BaseApiServices {
   @override
   Future getGetMyFilesApiResponse(String url) async {
     try {
-      final response = await http.get(Uri.parse(url));
+      final response = await http.get(
+        Uri.parse(url),
+        headers: {
+          "Accept": "application/json",
+          "Authorization":
+              "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MDY0OTIwLCJqdGkiOiI0YmRhYTIyZDI2MGE0YzNlODUwNjk4ODA1OWM2YWIyZiIsInVzZXJfaWQiOjN9.9wr14gIjKDh6L8qPfwtWn34_N2aUEWnnd5dZcXKUfEs"
+        },
+      );
       responseJson = returnResponse(response);
-      debugPrint(response.body.toString());
     } on SocketException {
       throw FetchDataException('No Internet Connection');
     }
@@ -26,7 +29,7 @@ class NetworkApiServices extends BaseApiServices {
   dynamic returnResponse(http.Response response) {
     switch (response.statusCode) {
       case 200:
-        dynamic responseJson = jsonDecode(response.body);
+        dynamic responseJson = jsonDecode(utf8.decode(response.bodyBytes));
         return responseJson;
       case 400:
         throw BadRequestException(response.body.toString());

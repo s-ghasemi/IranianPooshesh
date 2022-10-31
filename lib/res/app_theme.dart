@@ -9,6 +9,48 @@ class AppTheme {
       primaryColor: AppColors.primaryColor,
       scaffoldBackgroundColor: AppColors.backgroundColor,
       fontFamily: "iranSans",
+      textTheme: const TextTheme(
+        headline4: TextStyle(
+          color: Color(0xFF707070),
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+        ),
+        headline5: TextStyle(
+          color: Color(0xFF505050),
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+        ),
+        headline6: TextStyle(
+          color: AppColors.whiteColor,
+          fontWeight: FontWeight.w400,
+          fontSize: 10,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.whiteColor,
+        hintStyle: const TextStyle(
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+          color: AppColors.grayColor,
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+          borderSide: BorderSide.none,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+          borderSide: BorderSide.none,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+          borderSide: BorderSide.none,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+          borderSide: BorderSide.none,
+        ),
+      ),
       appBarTheme: AppBarTheme(
         surfaceTintColor: AppColors.whiteColor,
         scrolledUnderElevation: 2,

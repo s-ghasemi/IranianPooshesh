@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+
 import 'package:iranian_pooshesh/view/files/my_files_screen.dart';
 import 'package:iranian_pooshesh/view/home/home_screen.dart';
 import 'package:iranian_pooshesh/view/send_defects/send_defects_screen.dart';
 
-import '../../res/components/my_appBar.dart';
-import '../../res/components/my_bottom_navigation_bar.dart';
+import '../../res/components/appBar.dart';
+import '../../res/components/bottom_navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

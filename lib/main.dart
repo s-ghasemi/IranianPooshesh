@@ -10,14 +10,9 @@ import 'view_model/file_view_model.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initialization(null);
   HttpOverrides.global = MyHttpOverrides();
 
   runApp(const MyApp());
-}
-
-Future initialization(BuildContext? context) async {
-  await Future.delayed(const Duration(seconds: 4));
 }
 
 class MyApp extends StatelessWidget {
