@@ -10,8 +10,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.pink.withOpacity(0.5),
-    );
+    return Container();
   }
 }

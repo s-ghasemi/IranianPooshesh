@@ -6,7 +6,7 @@ class Hexagon extends CustomClipper<Path> {
     final path = Path();
 
     path
-      ..moveTo(size.width / 2, 0) // moving to topCenter 1st, then draw the path
+      ..moveTo(size.width / 2, 0)
       ..lineTo(size.width, size.height * .25)
       ..lineTo(size.width, size.height * .75)
       ..lineTo(size.width * .5, size.height)

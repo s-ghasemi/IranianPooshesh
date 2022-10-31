@@ -21,6 +21,8 @@ class CardInfoListTile extends StatelessWidget {
           isZeroPadding ? EdgeInsets.zero : const EdgeInsets.only(bottom: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.baseline,
+        textBaseline: TextBaseline.ideographic,
         children: [
           Row(
             children: [

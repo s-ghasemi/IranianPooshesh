@@ -4,8 +4,11 @@ import 'package:iranian_pooshesh/view/files/my_files_screen.dart';
 import 'package:iranian_pooshesh/view/home/home_screen.dart';
 import 'package:iranian_pooshesh/view/send_defects/send_defects_screen.dart';
 
+import '../../res/app_ir_pooshesh_icons.dart';
+import '../../res/color.dart';
 import '../../res/components/appBar.dart';
 import '../../res/components/bottom_navigation_bar.dart';
+import '../../res/components/clip_path/hexagon.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -35,6 +38,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       key: _scaffoldKey,
       drawerEnableOpenDragGesture: false,
+      drawer: const Drawer(),
       appBar: MyAppBar(
         title: "پرونده‌های من",
         onPressed: () => _scaffoldKey.currentState!.openDrawer(),

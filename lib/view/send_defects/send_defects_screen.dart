@@ -10,8 +10,6 @@ class SendDefectsScreen extends StatefulWidget {
 class _SendDefectsScreenState extends State<SendDefectsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber.withOpacity(0.5),
-    );
+    return Container();
   }
 }
