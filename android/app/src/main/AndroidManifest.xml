@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.iranian_pooshesh">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="iranian_pooshesh"
         android:name="${applicationName}"

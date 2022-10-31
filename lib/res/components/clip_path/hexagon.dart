@@ -4,7 +4,6 @@ class Hexagon extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final path = Path();
-
     path
       ..moveTo(size.width / 2, 0)
       ..lineTo(size.width, size.height * .25)

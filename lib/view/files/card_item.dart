@@ -45,10 +45,13 @@ class CardItem extends StatelessWidget {
                   color: AppColors.primaryColor,
                   width: 30,
                   height: 35,
-                  child: Text(
-                    "خودم",
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline6,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: Text(
+                      "خودم",
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
                   ),
                 ),
               ),
@@ -124,7 +127,7 @@ class CardItem extends StatelessWidget {
                               clipper: Hexagon(),
                               child: Container(
                                 color: AppColors.greenColor,
-                                width: 41,
+                                width: 38,
                                 height: 41,
                                 child: const Icon(
                                   IRPooshesh.tick,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iranian_pooshesh/res/app_ir_pooshesh_icons.dart';
@@ -39,7 +38,11 @@ class _MyFileScreenState extends State<MyFileScreen> {
             case Status.LOADING:
               return const MyCircularProgress();
             case Status.ERROR:
-              return Text(value.myFilesList.toString());
+              return Center(
+                child: Text(
+                  value.myFilesList.message.toString(),
+                ),
+              );
             case Status.COMPLETED:
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
